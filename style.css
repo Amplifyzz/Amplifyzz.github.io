@@ -1,7 +1,15 @@
-html {
-
-}
 header {
 display: flex;
 position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 50px;
+line-height: 50px;
+background-color: blueviolet;
+}
+
+header * {
+    display: inline;
+    height: 50px;
 }
