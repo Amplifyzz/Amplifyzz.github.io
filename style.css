@@ -30,8 +30,30 @@ body {
     align-items: center;
 }
 
-img {
-    max-width: 50%; /* Adjust this value as needed */
-    float: right;
-    margin-left: 20px; /* Adjust the margin as needed */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", monospace;
+}
+
+.section {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.down-arrow {
+    color: white;
+    font-size: 2rem;
+    display: none; 
 }
