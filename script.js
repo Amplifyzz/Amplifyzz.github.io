@@ -1,34 +1,38 @@
-const form = document. getElementById("quiz");
+const form = document.getElementById("quiz");
 form.addEventListener("submit", submitted);
 
 function submitted(event) {
     event.preventDefault()
-    const answers = (
-        question1: document. querySelector('input[name="q1"]:checked').value,
-        question2: document. querySelector('input[name="q2"]:checked').value
-    )
-    const results = calculate(answers);
-    display(results);
-}
+    const answers = {
+        question1: document.querySelector('input[name="q1"]:checked').value,
 
-function calculate(answers) {
-    if (answers.question1 === "yes") {
-        return "Thank you for reading";
-     } else if (answers.question1 === "no") {
-        return "You should read";
-     }
+    }
+    display(answers);
 }
 
 
-function display(results) {
-    const quizSection = document.getElementById("quiz wrapper");
+function display(answers) {
+    const quizSection = document.getElementById("quiz-wrapper");
     quizSection.innerHTML = "";
     const answerHeader = document.createElement("h1");
     answerHeader.textContent = "Your results are:";
     quizSection.appendChild(answerHeader);
     const result = document.createElement('p');
-    result.textContent = results;
+    if (answers.question1 === "yes") {
+        result.textContent = "correct";
+     } else if (answers.question1 === "no") {
+        result.textContent = "incorrect"
+        return "You should read";
+     }
     quizSection.appendChild(result);
+
+    if (answers.question2 === "no") {
+        result.textContent = "incorrect";
+    } else if (answers.question2 === "yes") {
+        result.textContent = "correct"
+        return "Great Job!";
+    }
+    
 }
 
 
