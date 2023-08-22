@@ -5,6 +5,7 @@
 <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <div id="header">
+
     <a href="fingering_chart.html">Fingering Chart</a>
     <a href="masterclass.html">Masterclass</a>
     <a href="quiz.html">Quiz</a>
@@ -68,7 +69,7 @@
                     return letters[Math.floor(Math.random() * 26)];
                 }).join("");
 
-                h1Element.innerText = newText;
+                Element.innerText = newText;
 
                 if (iterations >= originalText.length) { 
                     clearInterval(interval);
