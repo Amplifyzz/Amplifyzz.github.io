@@ -5,11 +5,18 @@ function submitted(event) {
     event.preventDefault()
     const answers = {
         question1: document.querySelector('input[name="q1"]:checked').value,
-
+        
     }
     display(answers);
 }
 
+function submitted(event) {
+    event.preventDefault()
+    const answers = {
+        question2: document.querySelector('input[name="q2"]:checked').value,
+    }
+    display(answers);
+}
 
 function display(answers) {
     const quizSection = document.getElementById("quiz-wrapper");
@@ -22,7 +29,7 @@ function display(answers) {
         result.textContent = "correct";
      } else if (answers.question1 === "no") {
         result.textContent = "incorrect"
-        return "You should read";
+        
      }
     quizSection.appendChild(result);
 
@@ -30,7 +37,7 @@ function display(answers) {
         result.textContent = "incorrect";
     } else if (answers.question2 === "yes") {
         result.textContent = "correct"
-        return "Great Job!";
+      
     }
     
 }
