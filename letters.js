@@ -7,7 +7,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             let iterations = 0;
             const interval = setInterval(() => {
                 const newText = h1Element.innerText.split("").map((letter, index) => {
-                    if (iterations >= originalText.length) {
+                    if(iterations >= originalText.length) {
                         clearInterval(interval);
                         return originalText[index];
                     }
