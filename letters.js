@@ -23,7 +23,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                 }
 
                 iterations += 1 / 3;
-            }, 30);
+            }, 15);
         }
 
         startRandomizing();
