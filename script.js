@@ -5,19 +5,10 @@ function submitted(event) {
     event.preventDefault()
     const answers = {
         question1: document.querySelector('input[name="q1"]:checked').value,
-        
+        question2: document.querySelector('input[name="q2"]:checked').value
     }
     display(answers);
 }
-
-function submitted(event) {
-    event.preventDefault()
-    const answers = {
-        question2: document.querySelector('input[name="q2"]:checked').value,
-    }
-    display(answers);
-}
-
 function display(answers) {
     const quizSection = document.getElementById("quiz-wrapper");
     quizSection.innerHTML = "";
@@ -26,20 +17,21 @@ function display(answers) {
     quizSection.appendChild(answerHeader);
     const result = document.createElement('p');
     if (answers.question1 === "yes") {
-        result.textContent = "correct";
+        result.textContent = "Question 1: correct";
      } else if (answers.question1 === "no") {
-        result.textContent = "incorrect"
+        result.textContent = "Question 1: incorrect"
         
      }
     quizSection.appendChild(result);
-const result = document.createElement ('p');
+const result2 = document.createElement ('p');
     if (answers.question2 === "no") {
-        result.textContent = "incorrect";
+        result2.textContent = "Question 1: incorrect";
     } else if (answers.question2 === "yes") {
-        result.textContent = "correct"
+        result2.textContent = "Question 1: correct";
       
     }
-    
+    quizSection.appendChild(result);
+    quizSection.appendChild(result2);
 }
 
 
