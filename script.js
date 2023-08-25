@@ -32,7 +32,7 @@ function display(answers) {
         
      }
     quizSection.appendChild(result);
-
+const result = document.createElement ('p');
     if (answers.question2 === "no") {
         result.textContent = "incorrect";
     } else if (answers.question2 === "yes") {
